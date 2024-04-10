@@ -1,2 +1,2 @@
-client view: `npm start` \n
+client view: `npm start` \
 dev view: `npm run dev`
