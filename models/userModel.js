@@ -9,9 +9,12 @@ const UserSchema = new Schema({
     email: String,
     firstname: String,
     lastname: String,
-    phoneno: String,
+    phoneno: String
 });
 
-const UserModel = mongoose.model("UserModel", UserSchema);
+const UserModel = mongoose.model("UserModel", UserSchema);  
 
-module.exports = UserModel;
+module.exports = {
+    UserModel: UserModel,
+    UserSchema: UserSchema
+};

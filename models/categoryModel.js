@@ -4,9 +4,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CategorySchema = new Schema({
-
+    name: String
 });
 
 const CategoryModel = mongoose.model("CategoryModel", CategorySchema);
 
-module.exports = CategoryModel;
+module.exports = {
+    CategoryModel: CategoryModel,
+    CategorySchema: CategorySchema
+};

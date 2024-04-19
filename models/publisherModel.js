@@ -4,9 +4,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PublisherSchema = new Schema({
-
+    name: String,
+    address: String,
+    description: String,
+    industry: String
 });
 
 const PublisherModel = mongoose.model("PublisherModel", PublisherSchema);
 
-module.exports = PublisherModel;
+module.exports = {
+    PublisherModel: PublisherModel,
+    PublisherSchema: PublisherSchema
+};

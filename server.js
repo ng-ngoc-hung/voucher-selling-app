@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const route = require('./routes/routes.js');
 const dataConnect = require('./database.js');
+const { UserModel } = require('./models/userModel.js');
 require('dotenv').config();
 
 const app = express();
@@ -16,12 +17,10 @@ app.use('/', route);
   try {
     await dataConnect();
     console.log('MongoDB connected successfully');
-    // You can add any code that needs the database connection here
   } catch (err) {
     console.error('Error connecting to MongoDB:', err);
   }
 })();
-
 
 // Start the server
 app.listen(PORT, () => {

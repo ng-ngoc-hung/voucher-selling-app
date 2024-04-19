@@ -4,9 +4,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PaymentSchema = new Schema({
-
+    name: String,
+    provider: String
 });
 
 const PaymentModel = mongoose.model("PaymentModel", PaymentSchema);
 
-module.exports = PaymentModel;
+module.exports = {
+    PaymentModel: PaymentModel,
+    PaymentSchema: PaymentSchema
+};
