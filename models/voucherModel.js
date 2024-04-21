@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { UserModel } = require("./userModel,js");
+const { UserModel } = require("./userModel.js");
 const { PublisherModel } = require("./publisherModel.js");
 const { CategoryModel } = require("./categoryModel.js");
 

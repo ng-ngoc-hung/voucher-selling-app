@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const route = require('./routes/routes.js');
 const dataConnect = require('./database.js');
-//const { CartModel } = require('./models/cartModel.js');
+// const fs = require('fs');
+// const { UserhaspaymentModel } = require('./models/userhaspaymentModel.js');
 require('dotenv').config();
 
 const app = express();
@@ -18,19 +18,20 @@ app.use('/', route);
   try {
     await dataConnect();
     console.log('MongoDB connected successfully');
-    await importData();
-    console.log('Data imported successfully');
+    // await importData();
+    // console.log('Data imported successfully');
   } catch (err) {
     console.error('Error connecting to MongoDB:', err);
   }
 })();
+
 /*
-const data = JSON.parse(fs.readFileSync('./models/data/cart.json', 'utf-8'))
+const data = JSON.parse(fs.readFileSync('./models/data/userhaspayment.json', 'utf-8'))
 
 async function importData() {
-  await CartModel.insertMany(data);
-}
-*/
+  await UserhaspaymentModel.insertMany(data);
+}*/
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

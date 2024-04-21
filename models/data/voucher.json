@@ -3,9 +3,351 @@
     "name": "Sale 30% Off",
     "description": "You can buy products with 30% sale of",
     "duration": "2024-06-20",
-    "code": "SALE30",
-    "price": "150000",
-    "publisher": "",
-    "category": ""
+    "code": "ADD30",
+    "price": "150.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca7",
+    "category": "6624bc7844a2db9eaa8a0e07"
+  },
+  {
+    "name": "999k Running shoes",
+    "description": "You can buy any running shoes with 999k",
+    "duration": "2024-06-20",
+    "code": "ADD999",
+    "price": "999.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca7",
+    "category": "6624bc7844a2db9eaa8a0e07"
+  },
+  {
+    "name": "A T-Shirt for 500k Bill",
+    "description": "We will give you a T-shirt for a 500k bill at our shop",
+    "duration": "2024-06-20",
+    "code": "ADDGIFT",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca7",
+    "category": "6624bc7844a2db9eaa8a0e07"
+  },
+  {
+    "name": "150k Clean dental plaque",
+    "description": "Clean your dental plague with just 150k",
+    "duration": "2024-06-20",
+    "code": "DC150",
+    "price": "150.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca8",
+    "category": "6624bc7844a2db9eaa8a0e08"
+  },
+  {
+    "name": "2.000.000 Off",
+    "description": "Sale of 2.000.000 for Orthodontics services",
+    "duration": "2024-06-20",
+    "code": "DC2M",
+    "price": "1.500.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca8",
+    "category": "6624bc7844a2db9eaa8a0e08"
+  },
+  {
+    "name": "Free teeth whitening for kids",
+    "description": "Kids are able to using teeth whitening service for free",
+    "duration": "2024-06-20",
+    "code": "DCTW",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca8",
+    "category": "6624bc7844a2db9eaa8a0e08"
+  },
+  {
+    "name": "Refridgerator Sale 20%",
+    "description": "Buy any refridgerator with 20% sale",
+    "duration": "2024-06-20",
+    "code": "DMX01",
+    "price": "1.000.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca9",
+    "category": "6624bc7844a2db9eaa8a0e0a"
+  },
+  {
+    "name": "Air-con Sale 20%",
+    "description": "Buy any Air-con with 20% sale",
+    "duration": "2024-06-20",
+    "code": "DMX02",
+    "price": "1.000.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca9",
+    "category": "6624bc7844a2db9eaa8a0e0a"
+  },
+  {
+    "name": "Washing machines Sale 20%",
+    "description": "Buy any Washing machines with 20% sale",
+    "duration": "2024-06-20",
+    "code": "DMX03",
+    "price": "1.000.000",
+    "publisher": "6624bb5a146dc2a1f0d72ca9",
+    "category": "6624bc7844a2db9eaa8a0e0a"
+  },
+  {
+    "name": "Laptops Sale 20%",
+    "description": "Buy any Laptops with 20% sale",
+    "duration": "2024-06-20",
+    "code": "FPT01",
+    "price": "1.500.000",
+    "publisher": "6624bb5a146dc2a1f0d72caa",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "Iphone Sale 20%",
+    "description": "Buy any Iphone with 20% sale",
+    "duration": "2024-06-20",
+    "code": "FPT02",
+    "price": "1.500.000",
+    "publisher": "6624bb5a146dc2a1f0d72caa",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "Oppo Sale 20%",
+    "description": "Buy any Oppo products with 20% sale",
+    "duration": "2024-06-20",
+    "code": "FPT03",
+    "price": "1.300.000",
+    "publisher": "6624bb5a146dc2a1f0d72caa",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "50% Discount for Gaming Gear",
+    "description": "Buy 1 Gaming Gear(Headphone, Mouse, Keyboard) with half price",
+    "duration": "2024-06-20",
+    "code": "GVN50",
+    "price": "500.000",
+    "publisher": "6624bb5a146dc2a1f0d72cab",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "30% Discount for Gaming Gear",
+    "description": "Buy 1 Gaming Gear(Headphone, Mouse, Keyboard) with half price",
+    "duration": "2024-06-20",
+    "code": "GVN30",
+    "price": "300.000",
+    "publisher": "6624bb5a146dc2a1f0d72cab",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "20% Discount for Gaming Gear",
+    "description": "Buy 1 Gaming Gear(Headphone, Mouse, Keyboard) with half price",
+    "duration": "2024-06-20",
+    "code": "GVN20",
+    "price": "200.000",
+    "publisher": "6624bb5a146dc2a1f0d72cab",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "1 Night Hotel 20%",
+    "description": "Book a night in a hotel with 20% off",
+    "duration": "2024-06-20",
+    "code": "G2J20N",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72cac",
+    "category": "6624bc7844a2db9eaa8a0e05"
+  },
+  {
+    "name": "1 Day Hotel 20%",
+    "description": "Book a day in a hotel with 20% off",
+    "duration": "2024-06-20",
+    "code": "G2J20D",
+    "price": "100.000",
+    "publisher": "6624bb5a146dc2a1f0d72cac",
+    "category": "6624bc7844a2db9eaa8a0e05"
+  },
+  {
+    "name": "1 Night Hotel 50%",
+    "description": "Book a night in a hotel with 50% off",
+    "duration": "2024-06-20",
+    "code": "G2J50",
+    "price": "200.000",
+    "publisher": "6624bb5a146dc2a1f0d72cac",
+    "category": "6624bc7844a2db9eaa8a0e05"
+  },
+  {
+    "name": "Size L Discount 50%",
+    "description": "Buy anything in size L with half price",
+    "duration": "2024-06-20",
+    "code": "HLD50",
+    "price": "30.000",
+    "publisher": "6624bb5a146dc2a1f0d72cad",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "Matcha Smoothies 50k",
+    "description": "Get a Matcha Smoothies size XL with 50k",
+    "duration": "2024-06-20",
+    "code": "HLDMC",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72cad",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "Milk coffee 20k",
+    "description": "Get a Milk Coffee size M with 20k",
+    "duration": "2024-06-20",
+    "code": "HLDML",
+    "price": "20.000",
+    "publisher": "6624bb5a146dc2a1f0d72cad",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "KFC Sale 10%",
+    "description": "Get 10% discount for your total bill in KFC",
+    "duration": "2024-06-20",
+    "code": "KFC10",
+    "price": "20.000",
+    "publisher": "6624bb5a146dc2a1f0d72cae",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "KFC Sale 20%",
+    "description": "Get 20% discount for your total bill in KFC",
+    "duration": "2024-06-20",
+    "code": "KFC20",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72cae",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "KFC Sale 50%",
+    "description": "Get 50% discount for your total bill in KFC",
+    "duration": "2024-06-20",
+    "code": "KFC50",
+    "price": "100.000",
+    "publisher": "6624bb5a146dc2a1f0d72cae",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "MCDonald Sale 10%",
+    "description": "Get 10% discount for your total bill in MCDonald",
+    "duration": "2024-06-20",
+    "code": "MCDonald10",
+    "price": "20.000",
+    "publisher": "6624bb5a146dc2a1f0d72caf",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "MCDonald Sale 20%",
+    "description": "Get 20% discount for your total bill in MCDonald",
+    "duration": "2024-06-20",
+    "code": "MCDonald20",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72caf",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "MCDonald Sale 50%",
+    "description": "Get 50% discount for your total bill in MCDonald",
+    "duration": "2024-06-20",
+    "code": "MCDonald50",
+    "price": "100.000",
+    "publisher": "6624bb5a146dc2a1f0d72caf",
+    "category": "6624bc7844a2db9eaa8a0e04"
+  },
+  {
+    "name": "Free 1 month Netflix",
+    "description": "Get 1 month Premium",
+    "duration": "2024-06-20",
+    "code": "NFLX1M",
+    "price": "150.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb0",
+    "category": "6624bc7844a2db9eaa8a0e06"
+  },
+  {
+    "name": "Free 1 year Netflix",
+    "description": "Get 1 year Premium",
+    "duration": "2024-06-20",
+    "code": "NFLX1Y",
+    "price": "1.500.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb0",
+    "category": "6624bc7844a2db9eaa8a0e06"
+  },
+  {
+    "name": "Free 6 months Netflix",
+    "description": "Get 6 months Premium",
+    "duration": "2024-06-20",
+    "code": "NFLX6M",
+    "price": "750.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb0",
+    "category": "6624bc7844a2db9eaa8a0e06"
+  },
+  {
+    "name": "Refridgerator Sale 20%",
+    "description": "Get 20% discount for buying refridgerator at Nguyen Kim",
+    "duration": "2024-06-20",
+    "code": "NKM20R",
+    "price": "1.000.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb1",
+    "category": "6624bc7844a2db9eaa8a0e0a"
+  },
+  {
+    "name": "Fan Sale 20%",
+    "description": "Get 20% discount for buying Fan at Nguyen Kim",
+    "duration": "2024-06-20",
+    "code": "NKM20F",
+    "price": "500.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb1",
+    "category": "6624bc7844a2db9eaa8a0e0a"
+  },
+  {
+    "name": "Dish washer Sale 20%",
+    "description": "Get 20% discount for buying Dish washer at Nguyen Kim",
+    "duration": "2024-06-20",
+    "code": "NKM20D",
+    "price": "1.000.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb1",
+    "category": "6624bc7844a2db9eaa8a0e0a"
+  },
+  {
+    "name": "20% Off",
+    "description": "Get 20% discount for buying products at Nike",
+    "duration": "2024-06-20",
+    "code": "NIKE20",
+    "price": "200.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb2",
+    "category": "6624bc7844a2db9eaa8a0e07"
+  },
+  {
+    "name": "50% Off",
+    "description": "Get 50% discount for buying products at Nike",
+    "duration": "2024-06-20",
+    "code": "NIKE50",
+    "price": "1.000.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb2",
+    "category": "6624bc7844a2db9eaa8a0e07"
+  },
+  {
+    "name": "50% Off",
+    "description": "Get 50% discount for buying products at Pharmacity",
+    "duration": "2024-06-20",
+    "code": "PMCT50",
+    "price": "50.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb3",
+    "category": "6624bc7844a2db9eaa8a0e08"
+  },
+  {
+    "name": "1 Month 15k",
+    "description": "Get Spotify Premium for 1 month with just 15k",
+    "duration": "2024-06-20",
+    "code": "SPTF15",
+    "price": "15.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb4",
+    "category": "6624bc7844a2db9eaa8a0e06"
+  },
+  {
+    "name": "Accessories sale up to 40k",
+    "description": "Discount 50% for accessories up to 40k",
+    "duration": "2024-06-20",
+    "code": "TGDD20",
+    "price": "20.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb5",
+    "category": "6624bc7844a2db9eaa8a0e09"
+  },
+  {
+    "name": "Sleeper Bus Ticket sale 100k",
+    "description": "Buy a sleeper bus ticket with 100k less",
+    "duration": "2024-06-20",
+    "code": "VXR100",
+    "price": "80.000",
+    "publisher": "6624bb5a146dc2a1f0d72cb6",
+    "category": "6624bc7844a2db9eaa8a0e05"
   }
 ]
