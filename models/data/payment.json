@@ -1,0 +1,4 @@
+[
+  { "name": "Credit Card", "provider": "Visa" },
+  { "name": "PayPal", "provider": "PayPal" }
+]

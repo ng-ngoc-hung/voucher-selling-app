@@ -5,9 +5,8 @@ const Schema = mongoose.Schema;
 
 const PublisherSchema = new Schema({
     name: String,
-    address: String,
-    description: String,
-    industry: String
+    logo: String,
+    description: String
 });
 
 const PublisherModel = mongoose.model("PublisherModel", PublisherSchema);

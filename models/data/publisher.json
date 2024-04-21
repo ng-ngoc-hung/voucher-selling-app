@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Adidas",
+    "logo": "../local/adidas.png",
+    "description": "Everything we do is rooted in sport. Sport plays an increasingly important role in more and more people's lives, on and off the field of play. It is central to every culture and society, and is core to our health and happiness."
+  },
+  {
+    "name": "Dental Care",
+    "logo": "../local/dentalcare.jpg",
+    "description": "Description sample"
+  },
+  {
+    "name": "Dien May Xanh",
+    "logo": "../local/dmx.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "FPT Shop",
+    "logo": "../local/fptshop.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "GearVN",
+    "logo": "../local/gearvn.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "Go2Joy",
+    "logo": "../local/go2joy.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "Highlands Coffee",
+    "logo": "../local/highland.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "KFC",
+    "logo": "../local/kfc.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "MC Donald",
+    "logo": "../local/mcdonald.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "Netflix",
+    "logo": "../local/netflix.jpg",
+    "description": "Description sample"
+  },
+  {
+    "name": "Nguyen Kim",
+    "logo": "../local/nguyenkim.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "Nike",
+    "logo": "../local/nike.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "Pharmacity",
+    "logo": "../local/pharmacity.webp",
+    "description": "Description sample"
+  },
+  {
+    "name": "Spotify",
+    "logo": "../local/spotify.png",
+    "description": "Description sample"
+  },
+  {
+    "name": "The gioi di dong",
+    "logo": "../local/tgdd.webp",
+    "description": "Description sample"
+  },
+  {
+    "name": "Vexere",
+    "logo": "../local/vexere.png",
+    "description": "Description sample"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "user": {
+      "username": "hungnguyen",
+      "password": "password123",
+      "email": "hung@gmail.com",
+      "firstname": "Hung",
+      "lastname": "Nguyen",
+      "phoneno": "01234567890"
+    }
+  }
+]

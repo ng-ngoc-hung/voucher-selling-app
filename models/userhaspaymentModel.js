@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const UserModel = require("./userModel.js");
-const PaymentModel = require("./paymentModel.js");
+const { UserModel } = require("./userModel.js");
+const { PaymentModel } = require("./paymentModel.js");
 
 // Define a schema
 const Schema = mongoose.Schema;
