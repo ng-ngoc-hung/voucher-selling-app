@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include ('components/navbar.ejs') %>
+
+    <div class="bg-gray-100">
+      <div class="p-4 mx-auto lg:max-w-7xl sm:max-w-full">
+        <h2 class="text-4xl font-medium my-8">Vouchers</h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <% vouchers.forEach(voucher => { %>
+          <div
+            class="bg-white rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
+          >
+            <div
+              class="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-11/12 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4"
+            >
+              <img
+                src="<%= voucher.publisher.logo %>"
+                alt="Voucher"
+                class="h-full w-full object-contain"
+              />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800">
+                <%= voucher.name %>
+              </h3>
+              <p class="text-gray-500 text-sm mt-2"><%= voucher.description %></p>
+              <p class="text-gray-500 text-sm mt-2"><strong>Publisher: </strong> <%= voucher.publisher.name %></p>
+              <p class="text-gray-500 text-sm mt-2"><strong>Category: </strong> <%= voucher.category.name %></p>
+              <h4 class="text-lg text-gray-700 font-bold mt-4">
+                <%= voucher.price %> VND
+              </h4>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('components/footer.ejs') %>
+  </body>
+</html>

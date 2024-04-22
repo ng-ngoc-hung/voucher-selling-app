@@ -1,30 +1,30 @@
 const express = require('express');
 const path = require('path');
+const voucherController = require('../controllers/voucher.js')
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'index.html'));
-});
+// Define route for the root URL with sorting options
+router.get('/', voucherController.renderVouchersPage);
 
 router.get('/cart', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'pages', 'cart.html'));
+  res.render('pages/cart'); // Render the cart.ejs template
 });
 
 router.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'pages', 'login.html'));
+  res.render('pages/login'); // Render the login.ejs template
 });
 
 router.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'pages', 'register.html'));
+  res.render('pages/register'); // Render the register.ejs template
 });
 
 router.get('/myvoucher', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'pages', 'myvoucher.html'));
+  res.render('pages/myvoucher'); // Render the myvoucher.ejs template
 });
 
 router.get('/profile', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'pages', 'profile.html'));
+  res.render('pages/profile'); // Render the profile.ejs template
 });
 
 module.exports = router;

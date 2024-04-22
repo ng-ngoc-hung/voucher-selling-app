@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const route = require('./routes/routes.js');
 const dataConnect = require('./database.js');
+
 // const fs = require('fs');
 // const { UserhaspaymentModel } = require('./models/userhaspaymentModel.js');
 require('dotenv').config();
@@ -9,8 +10,14 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'views')));
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
 
+// Define the path to your views directory
+app.set('views', path.join(__dirname, 'views'));
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'views')));
 // Use the route middleware
 app.use('/', route);
 
