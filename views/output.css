@@ -767,6 +767,10 @@ video {
   width: 3.5rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .w-28 {
   width: 7rem;
 }
@@ -1154,10 +1158,6 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
-}
-
-.tracking-tight {
-  letter-spacing: -0.025em;
 }
 
 .text-blue-700 {
