@@ -1,15 +1,14 @@
 const express = require('express');
 const path = require('path');
 const voucherController = require('../controllers/voucher.js')
+const cartController = require('../controllers/cart.js')
 
 const router = express.Router();
 
 // Define route for the root URL with sorting options
 router.get('/', voucherController.renderVouchersPage);
 
-router.get('/cart', (req, res) => {
-  res.render('pages/cart'); // Render the cart.ejs template
-});
+router.get('/cart', cartController.renderCartPage);
 
 router.get('/login', (req, res) => {
   res.render('pages/login'); // Render the login.ejs template

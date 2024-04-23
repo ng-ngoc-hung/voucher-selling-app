@@ -1,4 +1,5 @@
 const { UserModel } = require("../models/userModel.js");
+const { CartModel } = require("../models/cartModel.js");
 const session = require('express-session');
 
 exports.checkLogin = async (req, res) => {
@@ -14,6 +15,14 @@ exports.checkLogin = async (req, res) => {
     }
 
     req.session.isLoggedIn = true;
+    req.session.userEmail = user.email;
+
+    const cart = await CartModel.findOne({
+      "user.email": req.session.userEmail,
+    });
+    if(cart) {
+      req.session.cartId = cart._id;
+    }
 
     // If email and password are correct, send a success message
     res.json({ message: "Login successful" });

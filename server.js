@@ -6,6 +6,7 @@ const passport = require('passport');
 const dataConnect = require('./database.js');
 const { addUser } = require('./controllers/register.js');
 const { checkLogin, handleLogout } = require('./controllers/auth.js');
+const { addToCart, deleteFromCart } = require('./controllers/cart.js');
 
 // const fs = require('fs');
 // const { UserhaspaymentModel } = require('./models/userhaspaymentModel.js');
@@ -41,6 +42,9 @@ app.use('/', route);
 app.post('/register', addUser);
 app.post('/login', checkLogin);
 app.post('/logout', handleLogout);
+app.post('/addtocart', addToCart);
+
+app.delete('/removevoucher', deleteFromCart);
 
 (async () => {
   try {

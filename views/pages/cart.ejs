@@ -7,7 +7,6 @@
     <script src="../scripts.js"></script>
   </head>
   <body class="bg-gray-100">
-    
     <%- include('../components/navbar.ejs') %>
 
     <div class="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32 my-8">
@@ -19,34 +18,24 @@
         <div
           class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6"
         >
+          <% vouchers.forEach(voucher => { %>
           <div class="flex flex-col rounded-lg bg-white sm:flex-row">
             <img
               class="m-2 h-24 w-28 rounded-md border object-cover object-center"
-              src="../local/dmx.png"
+              src="<%= voucher.voucher.publisher.logo %>"
               alt=""
             />
             <div class="flex w-full flex-col px-4 py-4">
               <span class="font-semibold"
-                >Nike Air Max Pro 8888 - Super Light</span
+                ><%= voucher.voucher.name %></span
               >
-              <span class="float-right text-gray-400">42EU - 8.5US</span>
-              <p class="text-lg font-bold">$138.99</p>
+              <span class="float-right text-gray-400"><%= voucher.voucher.description %></span>
+              <p class="text-lg font-bold"><%= voucher.voucher.price %> VND</p>
+
+              <button onclick="removeItem('<%= JSON.stringify(voucher) %>')" class="text-red-500 hover:underline">Remove</button>
             </div>
           </div>
-          <div class="flex flex-col rounded-lg bg-white sm:flex-row">
-            <img
-              class="m-2 h-24 w-28 rounded-md border object-cover object-center"
-              src="../local/adidas.png"
-              alt=""
-            />
-            <div class="flex w-full flex-col px-4 py-4">
-              <span class="font-semibold"
-                >Nike Air Max Pro 8888 - Super Light</span
-              >
-              <span class="float-right text-gray-400">42EU - 8.5US</span>
-              <p class="mt-auto text-lg font-bold">$238.99</p>
-            </div>
-          </div>
+          <% }); %>
         </div>
 
         <p class="mt-8 text-lg font-medium">Payment Methods</p>
@@ -175,52 +164,7 @@
               </svg>
             </div>
           </div>
-          <label for="card-no" class="mt-4 mb-2 block text-sm font-medium"
-            >Card Details</label
-          >
-          <div class="flex">
-            <div class="relative w-7/12 flex-shrink-0">
-              <input
-                type="text"
-                id="card-no"
-                name="card-no"
-                class="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="xxxx-xxxx-xxxx-xxxx"
-              />
-              <div
-                class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3"
-              >
-                <svg
-                  class="h-4 w-4 text-gray-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"
-                  />
-                  <path
-                    d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <input
-              type="text"
-              name="credit-expiry"
-              class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="MM/YY"
-            />
-            <input
-              type="text"
-              name="credit-cvc"
-              class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="CVC"
-            />
-          </div>
-
+          
           <!-- Total -->
           <div class="mt-6 border-t border-b py-2">
             <div class="flex items-center justify-between">
@@ -228,11 +172,11 @@
               <p class="font-semibold text-gray-900">$399.00</p>
             </div>
             <div class="flex items-center justify-between">
-              <p class="text-sm font-medium text-gray-900">Shipping</p>
+              <p class="text-sm font-medium text-gray-900">Tax</p>
               <p class="font-semibold text-gray-900">$8.00</p>
             </div>
           </div>
-          <div class="mt-6 flex items-center justify-between">
+          <div class="mt-6 mb-6 flex items-center justify-between">
             <p class="text-sm font-medium text-gray-900">Total</p>
             <p class="text-2xl font-semibold text-gray-900">$408.00</p>
           </div>

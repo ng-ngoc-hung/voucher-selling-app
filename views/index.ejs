@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="../scripts.js"></script>
   </head>
   <body>
     <%- include ('components/navbar.ejs') %>
+
+    <div id="responseBox" class="fixed z-[999] p-4 text-sm text-green-500 bg-green-200" role="alert" style="display: none;">
+      <span id="responseMessage" class="font-medium"></span>
+    </div>
 
     <div class="bg-gray-100">
       <div class="p-4 mx-auto lg:max-w-7xl sm:max-w-full">
@@ -17,6 +22,7 @@
           <% vouchers.forEach(voucher => { %>
           <div
             class="bg-white rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
+            onclick="addToCart('<%= JSON.stringify(voucher) %>')"
           >
             <div
               class="bg-gray-100 w-10 h-10 flex items-center justify-center rounded-full cursor-pointer absolute top-4 right-4"
@@ -49,9 +55,15 @@
               <h3 class="text-lg font-bold text-gray-800">
                 <%= voucher.name %>
               </h3>
-              <p class="text-gray-500 text-sm mt-2"><%= voucher.description %></p>
-              <p class="text-gray-500 text-sm mt-2"><strong>Publisher: </strong> <%= voucher.publisher.name %></p>
-              <p class="text-gray-500 text-sm mt-2"><strong>Category: </strong> <%= voucher.category.name %></p>
+              <p class="text-gray-500 text-sm mt-2">
+                <%= voucher.description %>
+              </p>
+              <p class="text-gray-500 text-sm mt-2">
+                <strong>Publisher: </strong> <%= voucher.publisher.name %>
+              </p>
+              <p class="text-gray-500 text-sm mt-2">
+                <strong>Category: </strong> <%= voucher.category.name %>
+              </p>
               <h4 class="text-lg text-gray-700 font-bold mt-4">
                 <%= voucher.price %> VND
               </h4>
@@ -60,7 +72,7 @@
           <% }); %>
         </div>
       </div>
-    </div>
+    </div> 
 
     <%- include('components/footer.ejs') %>
   </body>
