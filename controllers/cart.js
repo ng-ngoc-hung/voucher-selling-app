@@ -53,7 +53,7 @@ exports.renderCartPage = async (req, res) => {
       })
         .populate({
           path: "voucher",
-          populate: { path: "publisher" },
+          populate: { path: "publisher category" },
         })
         .exec();
       

@@ -651,10 +651,6 @@ video {
   margin-inline-end: 1rem;
 }
 
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -1139,10 +1135,6 @@ video {
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-extrabold {
-  font-weight: 800;
 }
 
 .font-medium {

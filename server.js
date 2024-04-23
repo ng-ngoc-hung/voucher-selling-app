@@ -7,6 +7,7 @@ const dataConnect = require('./database.js');
 const { addUser } = require('./controllers/register.js');
 const { checkLogin, handleLogout } = require('./controllers/auth.js');
 const { addToCart, deleteFromCart } = require('./controllers/cart.js');
+const { addMyVoucher, removeMyVoucher } = require('./controllers/payment.js');
 
 // const fs = require('fs');
 // const { UserhaspaymentModel } = require('./models/userhaspaymentModel.js');
@@ -24,8 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(session({
   secret: 'voucher shop',
   resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 60000 },  
+  saveUninitialized: true, 
   isLoggedIn: false
 }))
 
@@ -43,8 +43,10 @@ app.post('/register', addUser);
 app.post('/login', checkLogin);
 app.post('/logout', handleLogout);
 app.post('/addtocart', addToCart);
+app.post('/addtomyvoucher', addMyVoucher);
 
 app.delete('/removevoucher', deleteFromCart);
+app.delete('/removemyvoucher', removeMyVoucher);
 
 (async () => {
   try {

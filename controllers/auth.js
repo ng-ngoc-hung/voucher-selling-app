@@ -16,6 +16,7 @@ exports.checkLogin = async (req, res) => {
 
     req.session.isLoggedIn = true;
     req.session.userEmail = user.email;
+    req.session.userId = user._id;
 
     const cart = await CartModel.findOne({
       "user.email": req.session.userEmail,

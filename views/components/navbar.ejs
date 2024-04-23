@@ -7,10 +7,10 @@
   >
     <div class="mr-16 w-16">
       <img
-          src="../local/weblogo.png"
-          alt="Logo"
-          class="h-full w-full object-contain"
-        />
+        src="../local/weblogo.png"
+        alt="Logo"
+        class="h-full w-full object-contain"
+      />
     </div>
   </div>
 
@@ -94,13 +94,18 @@
       </button>
 
       <!-- Placeholder for the user avatar or profile image -->
-      <div id="userAvatar" class="border-2 border-slate-500 rounded-full flex items-center justify-center ml-5 w-10 h-10">
-        <img
-          src="../local/profile.png"
-          alt="User"
-          class="h-full w-full object-contain"
-        />
-      </div>
+      <a href="/myvoucher">
+        <div
+          id="userAvatar"
+          class="border-2 border-slate-500 rounded-full flex items-center justify-center ml-5 w-10 h-10"
+        >
+          <img
+            src="../local/profile.png"
+            alt="User"
+            class="h-full w-full object-contain"
+          />
+        </div>
+      </a>
     </div>
   </div>
 </nav>
@@ -108,20 +113,20 @@
   const logoutButton = document.getElementById("logoutButton");
 
   logoutButton.addEventListener("click", () => {
-      fetch("/logout", {
-          method: "POST",
-          credentials: "same-origin" // Ensure cookies are sent with the request
+    fetch("/logout", {
+      method: "POST",
+      credentials: "same-origin", // Ensure cookies are sent with the request
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Redirect to the login page or perform any other action
+          window.location.href = "/login";
+        } else {
+          console.error("Logout failed");
+        }
       })
-      .then(response => {
-          if (response.ok) {
-              // Redirect to the login page or perform any other action
-              window.location.href = "/login";
-          } else {
-              console.error("Logout failed");
-          }
-      })
-      .catch(error => {
-          console.error("Error:", error);
+      .catch((error) => {
+        console.error("Error:", error);
       });
   });
 </script>

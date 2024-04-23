@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../output.css" rel="stylesheet">
-  <script src="../scripts.js"></script>
-</head>
-<body>
-  <%- include('../components/navbar.ejs') %>
-  
-  <h1 class="ml-10 mt-10 text-4xl font-extrabold">My Voucher page</h1>
-  
-  <%- include('../components/footer.ejs') %>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <script src="../scripts.js"></script>
+  </head>
+  <body>
+    <%- include('../components/navbar.ejs') %>
+
+    <div class="bg-gray-100">
+      <div class="p-4 mx-auto lg:max-w-7xl sm:max-w-full">
+        <h2 class="text-4xl font-medium my-8">My Vouchers</h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <% myvouchers.forEach(voucher => { %>
+          <div
+            class="bg-white rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
+          >
+            <div
+              class="w-11/12 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4"
+            >
+              <img
+                src="<%= voucher.voucher.publisher.logo %>"
+                alt="Voucher"
+                class="h-full w-full object-contain"
+              />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800">
+                <%= voucher.voucher.name %>
+              </h3>
+              <p class="text-gray-500 text-sm mt-2">
+                <%= voucher.voucher.description %>
+              </p>
+              <p class="text-gray-500 text-sm mt-2">
+                <strong>Publisher: </strong> <%= voucher.voucher.publisher.name %>
+              </p>
+              <p class="text-gray-500 text-sm mt-2">
+                <strong>Category: </strong> <%= voucher.voucher.category.name %>
+              </p>
+              <h4 class="text-lg text-gray-700 font-bold mt-4">
+                CODE: <%= voucher.voucher.code %>
+              </h4>
+              <button 
+                class="text-red-500 font-medium hover:underline"
+                onclick="removeVoucher('<%= JSON.stringify(voucher) %>')"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../components/footer.ejs') %>
+  </body>
 </html>

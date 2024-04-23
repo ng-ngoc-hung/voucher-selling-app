@@ -18,7 +18,16 @@
         <div
           class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6"
         >
-          <% vouchers.forEach(voucher => { %>
+          <% 
+          let subtotalPrice = 0;
+          const voucherlist = [];
+
+          vouchers.forEach(voucher => { 
+            voucherlist.push(voucher.voucher);
+
+            const price = parseInt(voucher.voucher.price.replace(/\./g, '')); 
+            subtotalPrice += price; 
+          %>
           <div class="flex flex-col rounded-lg bg-white sm:flex-row">
             <img
               class="m-2 h-24 w-28 rounded-md border object-cover object-center"
@@ -26,13 +35,18 @@
               alt=""
             />
             <div class="flex w-full flex-col px-4 py-4">
-              <span class="font-semibold"
-                ><%= voucher.voucher.name %></span
+              <span class="font-semibold"><%= voucher.voucher.name %></span>
+              <span class="float-right text-gray-400"
+                ><%= voucher.voucher.description %></span
               >
-              <span class="float-right text-gray-400"><%= voucher.voucher.description %></span>
               <p class="text-lg font-bold"><%= voucher.voucher.price %> VND</p>
 
-              <button onclick="removeItem('<%= JSON.stringify(voucher) %>')" class="text-red-500 hover:underline">Remove</button>
+              <button
+                onclick="removeItem('<%= JSON.stringify(voucher) %>')"
+                class="text-red-500 hover:underline"
+              >
+                Remove
+              </button>
             </div>
           </div>
           <% }); %>
@@ -164,25 +178,30 @@
               </svg>
             </div>
           </div>
-          
+
           <!-- Total -->
+          <%
+            let tax = subtotalPrice * (1 / 10);
+            let totalPrice = subtotalPrice + tax;
+          %>
           <div class="mt-6 border-t border-b py-2">
             <div class="flex items-center justify-between">
               <p class="text-sm font-medium text-gray-900">Subtotal</p>
-              <p class="font-semibold text-gray-900">$399.00</p>
+              <p class="font-semibold text-gray-900"><%= subtotalPrice.toLocaleString('en-US', { style: 'currency', currency: 'VND' }).slice(1) %> VND</p>
             </div>
             <div class="flex items-center justify-between">
-              <p class="text-sm font-medium text-gray-900">Tax</p>
-              <p class="font-semibold text-gray-900">$8.00</p>
+              <p class="text-sm font-medium text-gray-900">Tax (10%)</p>
+              <p class="font-semibold text-gray-900"><%= tax.toLocaleString('en-US', { style: 'currency', currency: 'VND' }).slice(1) %> VND</p>
             </div>
           </div>
           <div class="mt-6 mb-6 flex items-center justify-between">
             <p class="text-sm font-medium text-gray-900">Total</p>
-            <p class="text-2xl font-semibold text-gray-900">$408.00</p>
+            <p class="text-2xl font-semibold text-gray-900"><%= totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'VND' }).slice(1) %> VND</p>
           </div>
         </div>
         <button
           class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white"
+          onclick="addToMyVoucher('<%= JSON.stringify(voucherlist) %>')"
         >
           Place Order
         </button>

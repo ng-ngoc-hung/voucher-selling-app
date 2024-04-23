@@ -18,12 +18,6 @@ router.get('/register', (req, res) => {
   res.render('pages/register'); // Render the register.ejs template
 });
 
-router.get('/myvoucher', (req, res) => {
-  res.render('pages/myvoucher'); // Render the myvoucher.ejs template
-});
-
-router.get('/profile', (req, res) => {
-  res.render('pages/profile'); // Render the profile.ejs template
-});
+router.get('/myvoucher', voucherController.renderMyVouchersPage);
 
 module.exports = router;
